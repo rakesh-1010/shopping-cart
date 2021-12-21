@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { CustomerDetails } from '../components/customerDetails';
+import { CartDetails } from '../components/cartDetails';
 import { PIZZA_PRICE } from '../constants';
 import { Items } from '../types';
 
@@ -77,7 +77,7 @@ const Cart = () => {
     }
 
     return (
-        <CustomerDetails
+        <CartDetails
             user={user}
             cart={cart}
             cartTotal={cartTotal}

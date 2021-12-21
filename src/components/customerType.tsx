@@ -30,8 +30,6 @@ export const CustomerType: FC<Props> = ({ customerType, handleDiscount }) => {
         {customerType === "Facebook" &&
             <p className="text-green-500 text-xs italic">% Facebook Gets a 5 for 4 deal on Medium Pizza</p>
         }
-        
-             
     </div>
   )
 }

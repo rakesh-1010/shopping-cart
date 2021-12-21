@@ -8,7 +8,7 @@ interface MobileProps {
 export const CustomerMobile: React.FC<MobileProps> = ({ mobile, handleMobileNumber }) => {
     const isMobileValid = mobile.length !== 10;
     return (
-        <div className="mb-4">
+        <div className="mb-4" data-testid="mobile">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="mobile">
                 Mobile
             </label>

@@ -20,7 +20,7 @@ export const PizzaMenu: FC<MenuProps> = ({ cart, cartTotal, discount, handleCart
                <div className="flex flex-row p-4 text-gray-400 bg-white" key={index}>
                     <div className="basis-1/2">{type}</div>
                     <div className="basis-1/4 cursor-pointer select-none" onClick={() => handleCartItems(type.toLowerCase(), "dec")}>➖</div>
-                    <div className="basis-1/4">{item}</div>
+                    <div className="basis-1/4" data-testid={`${type}-count`}>{item}</div>
                     <div className="basis-1/4 cursor-pointer select-none" onClick={() => handleCartItems(type.toLowerCase(), "inc")}>➕</div>
                     <div className="basis-1/4">
                         ${item === 0 ? price : (item * price).toFixed(2)}
@@ -39,11 +39,11 @@ export const PizzaMenu: FC<MenuProps> = ({ cart, cartTotal, discount, handleCart
                 {cartItems()}
                 <div className="flex flex-row p-4 text-gray-400 bg-white justify-between">
                     <div>Discount</div>
-                    <div>${discount.toFixed(2)}</div>
+                    <div data-testid='discount'>${discount.toFixed(2)}</div>
                 </div>
                 <div className="flex flex-row p-4 text-gray-400 bg-white justify-between">
                     <div>Total</div>
-                    <div>${ (cartTotal).toFixed(2) }</div>
+                    <div data-testid='cartTotal'>${ (cartTotal).toFixed(2) }</div>
                 </div>
             </div>
         </div>

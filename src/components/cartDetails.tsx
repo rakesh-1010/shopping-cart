@@ -15,7 +15,7 @@ const CustomerName = () => {
   )
 }
 
-interface CartProps {
+export interface CartProps {
   cart: Items;
   user: User;
   cartTotal: number;
@@ -26,7 +26,7 @@ interface CartProps {
   handleDiscount: (event: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
-export const CustomerDetails: React.FC<CartProps> = ({cart, user, cartTotal, discount, customerType, handleDiscount, handleMobileNumber, handleCartItems }) => {
+export const CartDetails: React.FC<CartProps> = ({cart, user, cartTotal, discount, customerType, handleDiscount, handleMobileNumber, handleCartItems }) => {
   return(
     <div className="w-96">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-8">
